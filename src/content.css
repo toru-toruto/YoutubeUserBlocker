@@ -1,0 +1,29 @@
+.yub-hidden {
+  display: none !important;
+}
+
+.yub-block-btn {
+  margin-left: 6px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--yt-spec-text-secondary, #888);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+/* コメントにホバーしたときだけボタンを出す */
+ytd-comment-view-model:hover .yub-block-btn,
+ytd-comment-renderer:hover .yub-block-btn,
+.yub-block-btn:focus-visible {
+  opacity: 1;
+}
+
+.yub-block-btn:hover {
+  border-color: var(--yt-spec-10-percent-layer, #ccc);
+  color: #e53935;
+}

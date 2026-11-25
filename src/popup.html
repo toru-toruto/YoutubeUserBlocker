@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTube User Blocker</title>
+    <style>
+      body {
+        width: 340px;
+        margin: 0;
+        padding: 12px;
+        font: 13px/1.5 system-ui, -apple-system, "Hiragino Sans", sans-serif;
+        color: #0f0f0f;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 8px;
+      }
+      form {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 4px;
+      }
+      input {
+        flex: 1;
+        padding: 6px 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font: inherit;
+      }
+      button {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 6px;
+        background: #0f0f0f;
+        color: #fff;
+        font: inherit;
+        cursor: pointer;
+      }
+      .hint {
+        margin: 0 0 10px;
+        color: #606060;
+        font-size: 11px;
+      }
+      .message {
+        min-height: 1.5em;
+        margin: 0 0 6px;
+        font-size: 12px;
+      }
+      .message.error {
+        color: #c62828;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 320px;
+        overflow-y: auto;
+        border-top: 1px solid #eee;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .user {
+        flex: 1;
+        min-width: 0;
+      }
+      .user .name,
+      .user .id {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .user .id {
+        color: #606060;
+        font-size: 11px;
+      }
+      li button {
+        background: #f2f2f2;
+        color: #0f0f0f;
+        padding: 4px 8px;
+      }
+      .empty {
+        color: #606060;
+        padding: 12px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ブロック中のユーザー（<span id="count">0</span>）</h1>
+    <form id="add-form">
+      <input id="add-input" placeholder="@handle / チャンネル URL / UC..." autocomplete="off" />
+      <button type="submit">追加</button>
+    </form>
+    <p class="hint">コメントにマウスを乗せると出る「🚫 ブロック」からも追加できます。</p>
+    <p id="message" class="message"></p>
+    <ul id="list"></ul>
+    <script src="storage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

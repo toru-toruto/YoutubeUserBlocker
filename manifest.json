@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube User Blocker",
+  "version": "1.0.0",
+  "description": "YouTube の通常動画・Shorts のコメント欄から、指定したユーザーのコメントを非表示にします。",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "YouTube User Blocker",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["src/storage.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
