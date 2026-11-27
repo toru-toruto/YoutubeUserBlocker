@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "YouTube User Blocker",
   "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxmb4TqMNTwpxSTN9CwiAy+22xTeR/7uEFC8IExpLoUP8EQLqAqIg8nwOJxjK8u+mZY6FJl/9+hKNYrr6VPGl/P59LhFgUnxut2rmN3TmAj5mrZrXVw3qcU2lYMsLmRk0Vos/ltbrBBcBfjXCNJ0oroo0Qmi0Av93ioleX+qic8SAv4cs2/xIwogaIlGnrOsvKBP7jvtk+cwfn3aH884NEIv8iYgTxloIlPxhHChpPsccLRBbzZuQHBcmTIS82Pr4ckRbjojhIp1iNjQQ19Mc71M7Enr9XhQWeeZd0vKcUhT2hgMNI2SDTRqW00N1bof8hHe081zPdeW3unOop+JS/QIDAQAB",
   "description": "YouTube の通常動画・Shorts のコメント欄から、指定したユーザーのコメントを非表示にします。",
   "permissions": ["storage"],
   "action": {
